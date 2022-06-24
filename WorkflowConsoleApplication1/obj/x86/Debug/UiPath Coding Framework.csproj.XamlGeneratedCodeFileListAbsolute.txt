@@ -1,3 +1,3 @@
 obj\x86\Debug\_UiPath Coding Framework.g.cs
-obj\x86\Debug\Workflow1.g.cs
+obj\x86\Debug\DummyFlow.g.cs
 obj\x86\Debug\WorkflowConsoleApplication1_Workflow1_BeforeInitializeComponentHelper.cs

@@ -1,2 +1,2 @@
-Workflow1.g.xaml
+DummyFlow.g.xaml
 XamlStaticHelperNamespace._XamlStaticHelper

@@ -1,58 +1,68 @@
 ﻿using System;
 using System.Activities;
-using System.Activities.Expressions;
 using System.Activities.Statements;
-using System.Collections.Generic;
 using System.Linq;
+using System.Windows;
 using UiPath.Core;
 using UiPath.Core.Activities;
+using UiPath.UIAutomationNext.Activities;
 
-namespace WorkflowConsoleApplication1
+namespace UiPathCodingFramework
 {
     internal class Program
     {
+        [STAThreadAttribute]
         static void Main(string[] args)
         {
-            IDictionary<string, object> input = new Dictionary<string, object>();
-            input.Add("inMSG", "www.youtube.com");
 
-            IDictionary<string, object> output = new Dictionary<string, object>();
+            Console.WriteLine("Type !help or 0 for the list of commands.");
 
-            WorkflowApplication myWorkflowApplication= new WorkflowApplication(new MyCodeWorkflow(),input);
-            myWorkflowApplication.Run();
-            //MyCodeWorkflow activity = new MyCodeWorkflow();
-            //output = WorkflowInvoker.Invoke(activity, input);
-            //wtf
-        }
+            String Line = null;
 
-        public class MyCodeWorkflow : Activity
-        {
-            public InArgument<String> inMSG { get; set; }
-            public OutArgument<String> outMSG { get; set; }
-
-            public MyCodeWorkflow()
+            while (Line != "3")
             {
-                this.Implementation = () => new Sequence
+                if (Line == "IndicateOnScreen" || Line == "1")
                 {
-                    Activities =
-                    {
-                        new OpenBrowser()
-                        {
-                            BrowserType = BrowserType.Chrome,
-                            NewSession = true,
-                            Url = inMSG
-                            //Text=new InArgument<string>((activityContext)=>this.inMSG.Get(activityContext))
-                        },
 
-                        new Assign<String>
-                        {
-                            To=new ArgumentReference<String>("outMSG"),
-                            Value=new InArgument<String>((activityContext)=>this.inMSG.Get(activityContext))
-                        }
-                    }
-                };
+                    var IndicateOnScreen = new UCFIndicateOnScreen().Run
+                    (
+                        ContinueOnError: false
+                    );
+                    DateTime myTime = DateTime.Now;
+                    Console.WriteLine("Started: " + myTime.ToString());
+                    UiElement myIndicatedElement = (UiElement)IndicateOnScreen.Values.ElementAt(0);
+                    Console.WriteLine("The selector for this element is:");
+                    Console.WriteLine(" ");
+                    Console.WriteLine(myIndicatedElement.Selector.ToString());
+
+                    Clipboard.Clear();
+                    Clipboard.SetDataObject(char.Parse("\"") + myIndicatedElement.Selector.ToString() + char.Parse("\""));
+
+                    Console.WriteLine(" ");
+                    Console.WriteLine("The selector has been copied to the clipboard..");
+                    DateTime myFinishDateTime = DateTime.Now;
+                    Console.WriteLine("Finished: " + myFinishDateTime.ToString());
+                }
+
+                if (Line == "!help" || Line == "0")
+                {
+                    Console.WriteLine("Command list:");
+                    Console.WriteLine("1. IndicateOnScreen");
+                    Console.WriteLine("2. Clear Console");
+                    Console.WriteLine("3. Exit");
+                }
+
+                if (Line == "2" || Line == "Clear Console")
+                {
+                    Console.Clear();
+                    Console.WriteLine("Type !help or 0 for the list of commands.");
+                }
+
+                Line = Console.ReadLine();
             }
+
         }
+
     }
 
 }
