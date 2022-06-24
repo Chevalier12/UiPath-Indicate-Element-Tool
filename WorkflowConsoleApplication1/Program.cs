@@ -37,7 +37,10 @@ namespace UiPathCodingFramework
                     Console.WriteLine(myIndicatedElement.Selector.ToString());
 
                     Clipboard.Clear();
-                    Clipboard.SetDataObject(char.Parse("\"") + myIndicatedElement.Selector.ToString() + char.Parse("\""));
+
+                    String myString = char.Parse("\"") + myIndicatedElement.Selector.ToString() + char.Parse("\"");
+                    Clipboard.SetDataObject(myString);
+                    Clipboard.SetText(myString);
 
                     Console.WriteLine(" ");
                     Console.WriteLine("The selector has been copied to the clipboard..");
