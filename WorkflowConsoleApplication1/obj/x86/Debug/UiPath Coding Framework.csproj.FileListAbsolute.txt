@@ -751,3 +751,6 @@ C:\Users\l.avrigeanu\source\repos\UiPath-Indicate-Element-Tool\WorkflowConsoleAp
 C:\Users\l.avrigeanu\source\repos\UiPath-Indicate-Element-Tool\WorkflowConsoleApplication1\obj\x86\Debug\UiPath Coding Framework.csproj.CopyComplete
 C:\Users\l.avrigeanu\source\repos\UiPath-Indicate-Element-Tool\WorkflowConsoleApplication1\obj\x86\Debug\UiPath Coding Framework.exe
 C:\Users\l.avrigeanu\source\repos\UiPath-Indicate-Element-Tool\WorkflowConsoleApplication1\obj\x86\Debug\UiPath Coding Framework.pdb
+C:\Users\l.avrigeanu\source\repos\UiPath-Indicate-Element-Tool\WorkflowConsoleApplication1\obj\x86\Debug\UiPath Coding Framework.csproj.FileListAbsolute.txt
+C:\Users\l.avrigeanu\source\repos\UiPath-Indicate-Element-Tool\WorkflowConsoleApplication1\obj\x86\Debug\UiPath Coding Framework.csproj.XamlPass2Flag.txt
+C:\Users\l.avrigeanu\source\repos\UiPath-Indicate-Element-Tool\WorkflowConsoleApplication1\obj\x86\Debug\UiPath Coding Framework.dll

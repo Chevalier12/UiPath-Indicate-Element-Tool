@@ -11,11 +11,12 @@ namespace UiPathCodingFramework
 {
     internal class Program
     {
-        [STAThreadAttribute]
+        [STAThread]
         static void Main(string[] args)
         {
 
             Console.WriteLine("Type !help or 0 for the list of commands.");
+            Console.WriteLine(" ");
 
             String Line = null;
 
@@ -42,20 +43,25 @@ namespace UiPathCodingFramework
                     Console.WriteLine("The selector has been copied to the clipboard..");
                     DateTime myFinishDateTime = DateTime.Now;
                     Console.WriteLine("Finished: " + myFinishDateTime.ToString());
+                    Console.WriteLine(" ");
+
                 }
 
                 if (Line == "!help" || Line == "0")
                 {
+                    Console.WriteLine(" ");
                     Console.WriteLine("Command list:");
                     Console.WriteLine("1. IndicateOnScreen");
                     Console.WriteLine("2. Clear Console");
                     Console.WriteLine("3. Exit");
+                    Console.WriteLine(" ");
                 }
 
                 if (Line == "2" || Line == "Clear Console")
                 {
                     Console.Clear();
                     Console.WriteLine("Type !help or 0 for the list of commands.");
+                    Console.WriteLine(" ");
                 }
 
                 Line = Console.ReadLine();
