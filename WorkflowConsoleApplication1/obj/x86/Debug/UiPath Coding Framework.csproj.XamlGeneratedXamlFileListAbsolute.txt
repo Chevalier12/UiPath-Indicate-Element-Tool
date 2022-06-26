@@ -1,2 +1,0 @@
-obj\x86\Debug\DummyFlow.g.xaml
-obj\x86\Debug\WorkflowConsoleApplication1_Workflow1_BeforeInitializeComponentHelper.txt

@@ -739,18 +739,7 @@ C:\Users\l.avrigeanu\source\repos\UiPath-Indicate-Element-Tool\WorkflowConsoleAp
 C:\Users\l.avrigeanu\source\repos\UiPath-Indicate-Element-Tool\WorkflowConsoleApplication1\obj\x86\Debug\UiPath Coding Framework.csproj.AssemblyReference.cache
 C:\Users\l.avrigeanu\source\repos\UiPath-Indicate-Element-Tool\WorkflowConsoleApplication1\obj\x86\Debug\UiPath Coding Framework.csproj.SuggestedBindingRedirects.cache
 C:\Users\l.avrigeanu\source\repos\UiPath-Indicate-Element-Tool\WorkflowConsoleApplication1\obj\x86\Debug\UiPath Coding Framework.exe.config
-C:\Users\l.avrigeanu\source\repos\UiPath-Indicate-Element-Tool\WorkflowConsoleApplication1\obj\x86\Debug\DummyFlow.g.xaml
-C:\Users\l.avrigeanu\source\repos\UiPath-Indicate-Element-Tool\WorkflowConsoleApplication1\obj\x86\Debug\WorkflowConsoleApplication1_Workflow1_BeforeInitializeComponentHelper.txt
-C:\Users\l.avrigeanu\source\repos\UiPath-Indicate-Element-Tool\WorkflowConsoleApplication1\obj\x86\Debug\_UiPath Coding Framework.g.cs
-C:\Users\l.avrigeanu\source\repos\UiPath-Indicate-Element-Tool\WorkflowConsoleApplication1\obj\x86\Debug\DummyFlow.g.cs
-C:\Users\l.avrigeanu\source\repos\UiPath-Indicate-Element-Tool\WorkflowConsoleApplication1\obj\x86\Debug\WorkflowConsoleApplication1_Workflow1_BeforeInitializeComponentHelper.cs
-C:\Users\l.avrigeanu\source\repos\UiPath-Indicate-Element-Tool\WorkflowConsoleApplication1\obj\x86\Debug\UiPath Coding Framework.csproj.XamlGeneratedCodeFileListAbsolute.txt
-C:\Users\l.avrigeanu\source\repos\UiPath-Indicate-Element-Tool\WorkflowConsoleApplication1\obj\x86\Debug\UiPath Coding Framework.csproj.XamlGeneratedXamlFileListAbsolute.txt
-C:\Users\l.avrigeanu\source\repos\UiPath-Indicate-Element-Tool\WorkflowConsoleApplication1\obj\x86\Debug\AC2C1ABA-CCF6-44D4-8127-588FD4D0A860-DeferredValidationErrors.xml
 C:\Users\l.avrigeanu\source\repos\UiPath-Indicate-Element-Tool\WorkflowConsoleApplication1\obj\x86\Debug\UiPath Coding Framework.csproj.CoreCompileInputs.cache
 C:\Users\l.avrigeanu\source\repos\UiPath-Indicate-Element-Tool\WorkflowConsoleApplication1\obj\x86\Debug\UiPath Coding Framework.csproj.CopyComplete
 C:\Users\l.avrigeanu\source\repos\UiPath-Indicate-Element-Tool\WorkflowConsoleApplication1\obj\x86\Debug\UiPath Coding Framework.exe
 C:\Users\l.avrigeanu\source\repos\UiPath-Indicate-Element-Tool\WorkflowConsoleApplication1\obj\x86\Debug\UiPath Coding Framework.pdb
-C:\Users\l.avrigeanu\source\repos\UiPath-Indicate-Element-Tool\WorkflowConsoleApplication1\obj\x86\Debug\UiPath Coding Framework.csproj.FileListAbsolute.txt
-C:\Users\l.avrigeanu\source\repos\UiPath-Indicate-Element-Tool\WorkflowConsoleApplication1\obj\x86\Debug\UiPath Coding Framework.csproj.XamlPass2Flag.txt
-C:\Users\l.avrigeanu\source\repos\UiPath-Indicate-Element-Tool\WorkflowConsoleApplication1\obj\x86\Debug\UiPath Coding Framework.dll

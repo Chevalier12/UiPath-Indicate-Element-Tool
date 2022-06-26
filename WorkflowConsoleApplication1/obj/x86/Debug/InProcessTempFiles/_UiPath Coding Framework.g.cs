@@ -67,6 +67,8 @@ namespace XamlStaticHelperNamespace {
             assemblyList.Add(Load("System.Core, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089"));
             assemblyList.Add(Load("System.Data, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089"));
             assemblyList.Add(Load("System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089"));
+            assemblyList.Add(Load("System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" +
+                        ""));
             assemblyList.Add(Load("System.IO.Compression, Version=4.2.0.0, Culture=neutral, PublicKeyToken=b77a5c561" +
                         "934e089"));
             assemblyList.Add(Load("System.Net, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a"));
@@ -86,10 +88,15 @@ namespace XamlStaticHelperNamespace {
                         "4e089"));
             assemblyList.Add(Load("System.Transactions, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c56193" +
                         "4e089"));
+            assemblyList.Add(Load("System.Windows, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" +
+                        ""));
+            assemblyList.Add(Load("System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c5619" +
+                        "34e089"));
             assemblyList.Add(Load("System.Xaml, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089"));
             assemblyList.Add(Load("System.Xml, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089"));
             assemblyList.Add(Load("System.Xml.Linq, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e08" +
                         "9"));
+            assemblyList.Add(Load("WindowsBase, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35"));
             assemblyList.Add(Load("CsvHelper, Version=16.0.0.0, Culture=neutral, PublicKeyToken=8c4959082be5c823"));
             assemblyList.Add(Load("ICSharpCode.SharpZipLib, Version=1.3.3.11, Culture=neutral, PublicKeyToken=1b03e6" +
                         "acf1164f73"));

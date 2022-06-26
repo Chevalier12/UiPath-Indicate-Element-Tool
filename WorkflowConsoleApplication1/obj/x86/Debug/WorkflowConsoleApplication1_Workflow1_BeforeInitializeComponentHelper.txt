@@ -1,2 +1,0 @@
-DummyFlow.g.xaml
-XamlStaticHelperNamespace._XamlStaticHelper

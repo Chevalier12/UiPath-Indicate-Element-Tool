@@ -38,4 +38,53 @@ namespace UiPathCodingFramework
             return output;
         }
     }
+
+    public class UCFGetAttributes : Activity
+    {
+        public InArgument<string> SelectorArgument { get; set; }
+        public InArgument<string> AttributeArgument { get; set; }
+        public OutArgument<GenericValue> OutputArgument { get; set; }
+
+        public IDictionary<string, object> input = new Dictionary<string, object>();
+
+        public IDictionary<string, object> output = new Dictionary<string, object>();
+        public IDictionary<string, object> Run(
+            string Selector = null,
+            string Attribute = null
+        )
+        {
+
+            Implementation = () => new Sequence
+            {
+                Activities =
+                {
+                    new GetAttribute()
+                    {
+                        Target = new Target
+                        {
+                            Selector = new InArgument<string>((activityContext) => SelectorArgument.Get(activityContext)),
+                        },
+                        Attribute = new InArgument<string>((activityContext) => AttributeArgument.Get(activityContext)),
+                        Result = new OutArgument<GenericValue>((activityContext) => OutputArgument.Get(activityContext))
+
+                    }
+                }
+            };
+            input.Add(nameof(SelectorArgument), Selector);
+            input.Add(nameof(AttributeArgument), Attribute);
+
+            try
+            {
+                output = WorkflowInvoker.Invoke(this, input);
+            }
+            catch (Exception e)
+            {
+                //Console.WriteLine(e);
+            }
+
+            return output;
+        }
+
+
+    }
 }
