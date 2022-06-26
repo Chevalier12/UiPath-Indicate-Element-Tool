@@ -38,9 +38,10 @@ namespace UiPathCodingFramework
             return output;
         }
     }
-
+    
     public class UCFGetAttributes : Activity
     {
+        public static string myVar;
         public InArgument<string> SelectorArgument { get; set; }
         public InArgument<string> AttributeArgument { get; set; }
         public OutArgument<GenericValue> OutputArgument { get; set; }

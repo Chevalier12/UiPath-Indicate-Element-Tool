@@ -3,6 +3,7 @@ using System.Activities;
 using System.Activities.Statements;
 using System.Collections.Generic;
 using System.Diagnostics;
+using System.IO;
 using System.Linq;
 using System.Runtime.InteropServices;
 using System.Threading;
@@ -21,21 +22,13 @@ namespace UiPathCodingFramework
 {
     internal class Program
     {
+
         [STAThread]
         static void Main(string[] args)
         {
 
-
-            Console.WriteLine("Type !help or 0 for the list of commands.");
-            Console.WriteLine(" ");
-
-
-            NApplicationCard newApplicationCard = new NApplicationCard();
-
-            NClickFactory nClick = new NClickFactory();
-
-
             String Line = null;
+            Console.WriteLine("Type !help or 0 to get the list of commands.");
 
             while (Line != "3")
             {
@@ -46,8 +39,7 @@ namespace UiPathCodingFramework
                     (
                         ContinueOnError: false
                     );
-                    DateTime myTime = DateTime.Now;
-                    Console.WriteLine("Started: " + myTime.ToString());
+
                     UiElement myIndicatedElement = (UiElement)IndicateOnScreen.Values.ElementAt(0);
                     var Subsystem = myIndicatedElement.Selector.ToString().Split('>')[1].Split(' ')[0].Replace("<", "");
                     Console.WriteLine("The selector for this element is:");
@@ -125,9 +117,65 @@ namespace UiPathCodingFramework
                             Console.WriteLine("Continue adding more attributes? Y/N");
                             InitConsole = Console.ReadLine();
                             InitConsole = InitConsole.ToUpper();
+
                         }
                         ////////////////////////////////////////
 
+                        Console.WriteLine("");
+                        Console.WriteLine("Do you want to remove any attributes? Y/N");
+                        Console.WriteLine("");
+
+                        InitConsole = Console.ReadLine();
+                        InitConsole = InitConsole.ToUpper();
+                        while (InitConsole == "Y")
+                        {
+                            Console.WriteLine("");
+                            Console.WriteLine("Below you may see the list of attributes you can remove.");
+                            Console.WriteLine("");
+
+                            var AttributeList = myIndicatedElement.Selector.GetTag(myIndicatedElement.Selector.GetTagCount() - 1).GetAttributes();
+
+                            var AttrListIndex = 0;
+                            foreach (var Attribute in AttributeList)
+                            {
+                                Console.WriteLine(AttrListIndex + ". " + Attribute.GetName());
+                                AttrListIndex++;
+                            }
+
+                            Console.WriteLine("");
+                            Console.WriteLine("Press the numeric key related to your desired attribute.");
+                            Console.WriteLine("");
+
+                            var AttrIndex = Console.ReadLine();
+
+                            if (AttrIndex.IsNumeric() == true)
+                            {
+
+                                Console.WriteLine("You have selected index #" + AttrIndex + " value: " + AttributeList[Int32.Parse(AttrIndex)].GetValue());
+
+                                myIndicatedElement.Selector.GetTag(myIndicatedElement.Selector.GetTagCount() - 1)
+                                    .RemoveAttribute(AttributeList[Int32.Parse(AttrIndex)].GetName());
+
+                                Console.WriteLine("");
+                                Console.WriteLine("Your selector is now:");
+                                Console.WriteLine("");
+                                Console.WriteLine(myIndicatedElement.Selector.ToString());
+                                Console.WriteLine("");
+
+                                Console.WriteLine("");
+                                Console.WriteLine("Continue removing more attributes? Y/N");
+
+                                InitConsole = Console.ReadLine();
+                                InitConsole = InitConsole.ToUpper();
+
+                            }
+                            else
+                            {
+                                Console.WriteLine("");
+                                Console.WriteLine("The string you have provided does not resemble an integer.");
+                                Console.WriteLine("");
+                            }
+                        }
                     }
                     //////////////////////////////////////
 
@@ -139,8 +187,6 @@ namespace UiPathCodingFramework
 
                     Console.WriteLine(" ");
                     Console.WriteLine("The selector has been copied to the clipboard..");
-                    DateTime myFinishDateTime = DateTime.Now;
-                    Console.WriteLine("Finished: " + myFinishDateTime.ToString());
                     Console.WriteLine(" ");
 
                 }
